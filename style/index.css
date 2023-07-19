@@ -1,0 +1,79 @@
+/*SCSS Variable Dec*/
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+main {
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 838px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+}
+main section {
+  display: flex;
+}
+main header {
+  text-align: center;
+}
+main header h6 {
+  margin-top: -8px;
+}
+main #gameDisplay-section {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main #gameDisplay-section .container-div {
+  padding: 0.5em;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main #gameDisplay-section .container-div .containerTitle-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+main #gameDisplay-section .container-div .containerTitle-div h3, main #gameDisplay-section .container-div .containerTitle-div h5 {
+  margin: 0;
+}
+main #gameDisplay-section .container-div .card-div {
+  padding-top: 0.5em;
+}
+main #gameDisplay-section .container-div .card-div img {
+  max-width: 130px;
+  height: auto;
+}
+main #gameInfoAndButtons-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+}
+main #gameInfoAndButtons-section #gameStartButtons-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main #gameInfoAndButtons-section #gameStartButtons-div input {
+  width: 97px;
+}
+main #gameInfoAndButtons-section #gameControlButtonsAndMessage-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  main {
+    width: 513px;
+    min-width: 513px;
+  }
+  .card-div img {
+    width: 75px;
+  }
+}/*# sourceMappingURL=index.css.map */

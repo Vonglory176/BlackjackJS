@@ -1,0 +1,79 @@
+$primaryCard: rgb(144, 203, 232); /*SCSS Variable Dec*/
+
+body {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+main {
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 838px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0.5rem;
+    
+    section {display: flex;}
+
+    header {
+        text-align: center;
+        h6 {margin-top: -8px;}
+    }
+
+    #gameDisplay-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .container-div {
+            padding:0.5em;
+            width: fit-content;
+
+            .containerTitle-div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap:0.3em;
+
+                h3, h5 {margin: 0;}
+            }
+            
+            .card-div {
+                padding-top: 0.5em;
+                img {
+                    max-width: 130px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    #gameInfoAndButtons-section {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+
+        #gameStartButtons-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            input {width:97px;}
+        }
+
+        #gameControlButtonsAndMessage-div {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap:5px;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    main {
+        width:513px;
+        min-width: 513px;
+    }
+    .card-div img {width: 75px;}
+}

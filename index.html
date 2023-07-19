@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style/index.css">
+    <title>Blackjack</title>
+
+    <!-- Bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- SASS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.11.1/sass.js"></script> -->
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Blackjack</h1>
+            <h6>By Skyler 2023</h6>
+        </header>
+
+        <hr>
+
+        <section id="gameDisplay-section"> <!-- class="d-none" REMOVE "D-NONE" -->
+            <div id="dealerContainer-div" class="container-div">
+                <div class="containerTitle-div">
+                    <h3>Dealer Cards</h3>
+                    <h5>(Points:&nbsp;<span class="cardPoints">0</span>)</h5>   
+                </div>
+
+                <div id="dealerCard-div" class="card-div">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">                    
+                </div>   
+            </div>
+
+            <div id="playerContainer-div" class="container-div">
+                <div class="containerTitle-div">
+                    <h3>Player Cards</h3>
+                    <h5>(Points:&nbsp;<span class="cardPoints">0</span>)</h5>   
+                </div>
+                <div id="playerCard-div" class="card-div">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png">
+                    <img src="https://tekeye.uk/playing_cards/images/svg_playing_cards/backs/png_96_dpi/blue.png"> 
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="gameInfoAndButtons-section">
+            <div id="gameMoney-div">
+                <h6 class="moneyCounter">Money: <span>0</span></h6>
+                <h6 class="betCounter">Current Bet: <span>0</span></h6>
+            </div>
+
+            <div id="gameStartButtons-div">
+                <button id="newGame-button">New Game</button>
+                <input type="number" id="betInput" placeholder="Insert bet!">
+                <!-- <button id="resetStats-button">Reset Stats</button> Add local storage? -->
+            </div>
+            
+            <div id="gameControlButtonsAndMessage-div"> <!-- REMOVE "D-NONE" -->
+                <h6 id="gameMessage"></h6>
+                <button id="stand-button" class="d-none">Stand</button>
+                <button id="hit-button" class="d-none">Hit</button> <!-- Add local storage? -->
+            </div>
+        </section>
+    </main>
+
+
+    <script type="module" src="javascript/index.js"></script>
+</body>
+</html>
