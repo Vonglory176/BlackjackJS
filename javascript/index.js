@@ -95,7 +95,7 @@ $("#newGame-button").on("click", () => {
     if (!gameState) blackjack = new BlackJack(money) //Change to on load?
 
     //Getting Bet
-    if (!blackjack.getBet($("#betInput").val())) {
+    if (!blackjack.getBet(Math.floor($("#betInput").val()))) {
         $("#gameMessage").html("Invalid/Insufficient bet amount!!")
         return
     }
@@ -245,6 +245,6 @@ function gameOver() {
     $("input").removeAttr("disabled")
 
     //Money/Bet update
-    $(".moneyCounter span").html(`${money = blackjack.money}`)
+    $(".moneyCounter span").html(`${money = Math.ceil(blackjack.money)}`)
     $(".betCounter span").html(`0`)
 }
